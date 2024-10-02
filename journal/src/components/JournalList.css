@@ -1,0 +1,122 @@
+/* JournalList.css */
+
+body {
+  background-color: #161a30;
+  color: #F0ece5;
+  font-family: Arial, sans-serif;
+}
+
+.journal-list {
+  padding: 20px;
+  text-align: center;
+  background-color: #161a30;
+  
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #b6bbc4;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.date-header {
+  grid-column: 1 / -1;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #c8ccd3;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.journal-entry {
+  background-color: rgba(240, 236, 229, 0.1);
+  border: 1px solid rgba(182, 187, 196, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  height: 130px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.journal-entry:hover {
+  background-color: rgba(240, 236, 229, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #F0ece5;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.entry-content {
+  max-height: 70px;
+  overflow: hidden;
+  color: #dadde2;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.entry-content p {
+  color: #a5a39f;  /* Ensure paragraphs within content are light */
+  margin-top: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(22, 26, 48, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgba(240, 236, 229, 0.95);
+  color: #161a30;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: #161a30;
+  color: #F0ece5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #1e2139;
+}

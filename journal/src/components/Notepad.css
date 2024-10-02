@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+.vent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 84vh;
+  background-color: #161a30;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+}
+
+.vent-space {
+  width: 90%;
+  max-width: 800px;
+  background-color: #31304D;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.vent-header {
+  background-color: #31304D;
+  color: #F0ece5;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 2px solid #b6bbc4;
+}
+
+.vent-content {
+  padding: 30px;
+}
+
+.vent-textarea {
+  width: 94%;
+  min-height: 300px;
+  background-color: #31304D;
+  border: none;
+  border-radius: 8px;
+  color: #F0ece5;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 20px;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.vent-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(240, 236, 229, 0.1);
+}
+
+.vent-textarea::placeholder {
+  color: #b6bbc4;
+  opacity: 0.7;
+}
+
+.vent-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #31304D;
+}
+
+.mood-selector {
+  display: flex;
+  gap: 15px;
+}
+
+.mood-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.5;
+}
+
+.mood-icon:hover, .mood-icon.selected {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.vent-save-btn {
+  background-color: #b6bbc4;
+  color: #161a30;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.vent-save-btn:hover {
+  background-color: #F0ece5;
+  transform: translateY(-2px);
+}
+
+.alert {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  color: #F0ece5;
+  font-size: 1rem;
+  opacity: 0;
+  animation: fadeInOut 3s ease-in-out;
+  background-color: #31304D;
+  border: 1px solid #b6bbc4;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; transform: translateY(20px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .vent-space {
+    width: 100%;
+  }
+  
+  .vent-header {
+    font-size: 1.3rem;
+  }
+  
+  .vent-textarea {
+    font-size: 1rem;
+  }
+}
