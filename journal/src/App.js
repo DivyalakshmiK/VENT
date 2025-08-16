@@ -16,11 +16,3 @@ function App() {
         <Route path="/landing" element={<Landing />} />
         <Route path="/list" element={<JournalList/>}/>
         <Route path="/calendar" element={<Calendar/>}/>
-        <Route path="/ai" element={<Chat/>}/>
-        <Route path="/new" element={<Notepad/>}/>
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
